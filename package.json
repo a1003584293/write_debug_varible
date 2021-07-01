@@ -1,0 +1,22 @@
+{
+  "name": "write_debug_varible",
+  "version": "1.0.0",
+  "description": "In vscode debug mode, save variables of any type to the JSON file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a1003584293/write_debug_varible.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a1003584293/write_debug_varible/issues"
+  },
+  "homepage": "https://github.com/a1003584293/write_debug_varible#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
