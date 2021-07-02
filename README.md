@@ -17,7 +17,7 @@
 
 **<font color=#FF0000>Tips：下面两行代码请放在入口文件(app.js 或 index.js)或是声明global变量的文件中。</font>**<br />
 
-``` const { saveVarible } = require('./index'); ```<br />
+``` const { saveVarible } = require('write-debug-varible'); ```<br />
 ``` global.saveVarible = saveVarible; ```<br />
 在debug断点时，只需要在调试控制台执行 ``` saveVarible("absolutePath/file.json", varible) ```即可
 
@@ -26,7 +26,7 @@
 ##  <font color=#c88afa>单JS文件用法：</font><br />
 <font color=#00ffff>
 
-``` const { saveVarible } = require('./index'); ```<br />
+``` const { saveVarible } = require('write-debug-varible'); ```<br />
 ``` saveVarible(path, varible); ```
 </font><br />
 
