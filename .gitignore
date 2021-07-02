@@ -3,3 +3,4 @@ package-lock.json
 .DS_Store
 test.json
 test1.json
+.vscode/
