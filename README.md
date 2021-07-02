@@ -19,7 +19,7 @@
 
 ``` const { saveVarible } = require('write-debug-varible'); ```<br />
 ``` global.saveVarible = saveVarible; ```<br />
-在debug断点时，只需要在调试控制台执行 ``` saveVarible("absolutePath/file.json", varible) ```即可
+在debug断点时，只需要在调试控制台执行 ``` saveVarible("./file.json", varible) ```即可
 
 </font>
 
@@ -27,10 +27,6 @@
 <font color=#00ffff>
 
 ``` const { saveVarible } = require('write-debug-varible'); ```<br />
-``` saveVarible("absolutePath/file.json", varible); ```
+``` saveVarible("./file.json", varible); ```
 </font><br />
-
-
-##  <font color=#c88afa>写在最后：</font><br />
-<font color=#00ffff>之所以保存JSON文件的路径为绝对路径，是因为在调试控制台不能使用相对路径( ./ )，也不能使用__dirname，除非__dirname被声明为一个变量</font><br />
 
