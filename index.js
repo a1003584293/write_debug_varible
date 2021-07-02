@@ -15,7 +15,7 @@ function written(){
 
 function done(path){
   console.log(map.get('finaly') || '');
-  written(map.get('finaly'));
+  written(map.get('finaly') || '');
   fs.writeFileSync(path, map.get('text'));
   map.delete('finaly');
   // 必须设置为空，不然连续调用内容会叠加，也不能执行map.clear()，如果连续调用，第二次text是undefined，那么写出文件开头就是undefined
@@ -63,7 +63,7 @@ function saveVarible(path, obj = {}, key, isFinalArg) {
     const isFinal = keys.indexOf(key) + 1 == keys.length
     // 保证 key 不是原型的属性
     if (obj.hasOwnProperty(key)) {
-      // 像第一个name和最后的beijing，既不是obj也不是arr，所以执行完saveVarible不用打印“ } ”和“ ] ”
+      // 像第一个name和最后的age，既不是obj也不是arr，所以执行完saveVarible不用打印“ } ”和“ ] ”
       const current = {
         isArray: Array.isArray(obj[key]),
         isObj: typeof obj[key] == 'object' && !Array.isArray(obj[key]),
