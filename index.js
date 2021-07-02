@@ -30,8 +30,8 @@ function saveVarible(path, obj = {}, key, isFinalArg) {
     // obj之所以判断是不是string，是为了split不报错，确保只对字符串进行操作
     // 最后的isFinalArg 主要是看数组里是不是最后一个，最后一个不加逗号
     // 如果要替换字符串中的双引号，请加上.split(`"`).join(`\\"`)
-    console.log(key - 0 >= 0 ? `` : `"${key}":`, `"${typeof obj == 'string' ? obj.split('\n').join('\\n') : obj}"`, isFinalArg ? '' : ',');
-    written(key - 0 >= 0 ? `` : `"${key}":`, `"${typeof obj == 'string' ? obj.split('\n').join('\\n') : obj}"`, isFinalArg ? '' : ',');
+    key == undefined ? console.log(obj) : console.log(key - 0 >= 0 ? `` : `"${key}":`, `"${typeof obj == 'string' ? obj.split('\n').join('\\n') : obj}"`, isFinalArg ? '' : ',');
+    key == undefined ? (written(obj), done(path)) : written(key - 0 >= 0 ? `` : `"${key}":`, `"${typeof obj == 'string' ? obj.split('\n').join('\\n') : obj}"`, isFinalArg ? '' : ',');
     return obj;
   };
 
