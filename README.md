@@ -25,7 +25,7 @@
 ##  <font color=#c88afa>单JS文件中引入：</font><br />
 <font color=#00ffff>
 
-``` const { saveVarible } = require('write-debug-varible'); ```<br />
+``` const { saveVarible } = require('write-debug-varible'); ```
 </font><br />
 
 ##  <font color=#c88afa>如何调用：</font><br />
