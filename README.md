@@ -27,7 +27,7 @@
 <font color=#00ffff>
 
 ``` const { saveVarible } = require('write-debug-varible'); ```<br />
-``` saveVarible(path, varible); ```
+``` saveVarible("absolutePath/file.json", varible); ```
 </font><br />
 
 
