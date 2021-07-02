@@ -11,23 +11,26 @@
 ##  <font color=#c88afa>描述：</font><br />
 <font color=#00ffff>在debug断点时，可以将任何类型的变量，输出到指定路径的JSON文件中</font><br />
 
-##  <font color=#c88afa>Web服务用法：</font><br />
+##  <font color=#c88afa>Web服务中引入：</font><br />
 <font color=#00ffff>
-仅需两行代码，即可在debug断点时 使用调试控制台保存内存中的变量<br /><br />
+仅需两行代码，即可在代码里 或 debug断点的时候 使用调试控制台保存程序中的变量<br /><br />
 
 **<font color=#FF0000>Tips：下面两行代码推荐放在入口文件(app.js 或 index.js)或是声明global变量的文件中。</font>**<br />
 
 ``` const { saveVarible } = require('write-debug-varible'); ```<br />
 ``` global.saveVarible = saveVarible; ```<br />
-在debug断点时，只需要在调试控制台执行 ``` saveVarible("./file.json", varible) ```<br />
-即可在当前项目中看到生成的JSON文件
 
 </font>
 
-##  <font color=#c88afa>单JS文件用法：</font><br />
+##  <font color=#c88afa>单JS文件中引入：</font><br />
 <font color=#00ffff>
 
 ``` const { saveVarible } = require('write-debug-varible'); ```<br />
-``` saveVarible("./file.json", varible); ```&nbsp;&nbsp;&nbsp;// 该行无论是代码里 还是 debug断点时在调试控制台执行都可以
 </font><br />
 
+##  <font color=#c88afa>如何调用：</font><br />
+<font color=#00ffff>
+
+``` saveVarible("./file.json", varible); ```&nbsp;&nbsp;&nbsp;// 该行无论是放到代码里 还是 debug断点的时候使用调试控制台执行都可以<br />
+即可在当前项目中看到生成的JSON文件
+</font><br />
