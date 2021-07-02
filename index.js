@@ -14,7 +14,7 @@ function written(){
 }
 
 function done(path){
-  console.log(map.get('finaly'));
+  console.log(map.get('finaly') || '');
   written(map.get('finaly'));
   fs.writeFileSync(path, map.get('text'));
   map.delete('finaly');
