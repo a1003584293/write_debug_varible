@@ -21,7 +21,7 @@
 ``` global.saveVarible = saveVarible; ```<br />
 在debug断点时，只需要在调试控制台执行 ``` saveVarible("absolutePath/file.json", varible) ```即可
 
-</font><br />
+</font>
 
 ##  <font color=#c88afa>单JS文件用法：</font><br />
 <font color=#00ffff>
