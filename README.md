@@ -5,7 +5,7 @@
 最初的解决方案是 在调试控制台使用JSON.stringfy(dataList)，将结果复制到js文件中，并把它赋值给一个变量，在执行JSON.parse(varible)却报错了。<br />
 很显然，JSON.stringfy()函数并不是完美的解决方案。<br/>
 **<font color=#FF0000>Tips：如果您还不知道vscode编辑器如何debug JavaScript代码，请先使用搜索引擎搜索vscode debug JavaScript。</font><br />**
-众所周知，在debug 断点时 调试控制台是可以执行代码的，也可以输入程序运行中的变量可以看到它的值。<br /></font>
+众所周知，在debug 断点时 调试控制台是可以执行代码的，也可以输入程序运行中的变量来看到它的值。<br /></font>
 ![Alt text](./debug_console.png "debug_console")
 
 ##  <font color=#c88afa>描述：</font><br />
@@ -15,11 +15,12 @@
 <font color=#00ffff>
 仅需两行代码，即可在debug断点时 使用调试控制台保存内存中的变量<br /><br />
 
-**<font color=#FF0000>Tips：下面两行代码请放在入口文件(app.js 或 index.js)或是声明global变量的文件中。</font>**<br />
+**<font color=#FF0000>Tips：下面两行代码推荐放在入口文件(app.js 或 index.js)或是声明global变量的文件中。</font>**<br />
 
 ``` const { saveVarible } = require('write-debug-varible'); ```<br />
 ``` global.saveVarible = saveVarible; ```<br />
-在debug断点时，只需要在调试控制台执行 ``` saveVarible("./file.json", varible) ```即可
+在debug断点时，只需要在调试控制台执行 ``` saveVarible("./file.json", varible) ```<br />
+即可在当前项目中看到生成的JSON文件
 
 </font>
 
@@ -27,6 +28,6 @@
 <font color=#00ffff>
 
 ``` const { saveVarible } = require('write-debug-varible'); ```<br />
-``` saveVarible("./file.json", varible); ```
+``` saveVarible("./file.json", varible); ```&nbsp;&nbsp;&nbsp;// 该行无论是代码里 还是 debug断点时在调试控制台执行都可以
 </font><br />
 
