@@ -1,6 +1,6 @@
 {
   "name": "write-debug-varible",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "In vscode debug mode, save variables of any type to the JSON file",
   "main": "index.js",
   "scripts": {
