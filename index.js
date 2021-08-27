@@ -13,13 +13,15 @@ function written(){
   map.set('text', text + Array.prototype.join.call(arguments, ""));
 }
 
-function done(path){
+function done(path = {}){
   console.log(map.get('finaly') || '');
   written(map.get('finaly') || '');
-  fs.writeFileSync(path, map.get('text'));
+  const text = map.get('text');
+  if (typeof path == 'string') fs.writeFileSync(path, text);
   map.delete('finaly');
   // 必须设置为空，不然连续调用内容会叠加，也不能执行map.clear()，如果连续调用，第二次text是undefined，那么写出文件开头就是undefined
   map.set('text', '');
+  if (typeof path != 'string') path.text = text;
   console.log('saved');
 }
 

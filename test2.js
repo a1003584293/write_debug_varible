@@ -1,8 +1,9 @@
 const { saveVarible } = require('./index');
 
+const value = {};
 // 测试基础类型
 const page = 10;
-saveVarible(`${__dirname}/test.json`, page);
+saveVarible(value, page);
 
 // 测试数组类型
 const userArr = [
@@ -19,7 +20,7 @@ const userArr = [
     books: ['book1', 'book2']
   }
 ];
-saveVarible(`${__dirname}/test1.json`, userArr);
+saveVarible(value, userArr);
 
 // 测试object类型
 const user = {
@@ -32,4 +33,5 @@ const user = {
   },
   age: 18
 };
-saveVarible(`${__dirname}/test2.json`, user);
+saveVarible(value, user);
+console.log()
